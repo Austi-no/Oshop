@@ -1,3 +1,5 @@
+import { AppUser } from './../../model/app-user';
+import { AuthService } from './../../security/helpers/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  appUser: AppUser
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-  }
+    this.authService.appUser$.subscribe(res => this.appUser=res)
 
+
+
+  }
+  logout() {
+    this.authService.logout()
+  }
 }

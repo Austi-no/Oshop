@@ -6,6 +6,7 @@ export const environment = {
     projectId: "oshop-101",
     storageBucket: "oshop-101.appspot.com",
     messagingSenderId: "812599205897",
+    databaseURL: "https://oshop-101-default-rtdb.firebaseio.com",
     appId: "1:812599205897:web:eeb7e347bd5d53f011d8d8",
     measurementId: "G-VL8CSWYK2G"
   }
